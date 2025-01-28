@@ -1,14 +1,12 @@
  // Smooth Scroll Activation for navigation links
- const navLinks = document.querySelectorAll('nav a');
- const sections = document.querySelectorAll('section');
-
- navLinks.forEach(link => {
-     link.addEventListener('click', (e) => {
-         e.preventDefault();
-         const targetSection = document.querySelector(link.getAttribute('href'));
-         window.scrollTo({
-             top: targetSection.offsetTop - 50,
-             behavior: 'smooth'
-         });
-     });
- });
+    // Smooth Scroll for Navigation
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            window.scrollTo({
+                top: target.offsetTop - 70,
+                behavior: 'smooth'
+            });
+        });
+    });
